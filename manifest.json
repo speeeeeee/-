@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "글정방지",
+    "version": "2.0",
+    "description": "글정방지",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [{
+      "matches": ["https://playentry.org/community/entrystory/*"],
+      "js": ["content.js"]
+    }],
+    "permissions": ["storage"],  
+    "action": {    
+      "default_icon": "black.png",    
+      "default_popup": "popup.html"  
+    }
+  }
